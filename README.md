@@ -1,6 +1,6 @@
 # YouTube Timestamp Scroller
 
-> Browser extension to scroll back to a YouTube comment after clicking its timestamp
+> Browser extension to scroll back to a YouTube comment after watching its timestamp
 
 ## Changelog
 

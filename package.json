@@ -1,7 +1,7 @@
 {
   "name": "youtube-timestamp-scroller",
   "version": "1.0.0",
-  "description": "Browser extension to scroll back to a YouTube comment after clicking its timestamp",
+  "description": "Browser extension to scroll back to a YouTube comment after watching its timestamp",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

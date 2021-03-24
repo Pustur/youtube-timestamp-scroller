@@ -3,7 +3,7 @@
   "manifest_version": 2,
   "name": "YouTube Timestamp Scroller",
   "description": "Browser extension to scroll back to a YouTube comment after clicking its timestamp",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "content_scripts": [
     {
       "matches": ["https://www.youtube.com/*"],

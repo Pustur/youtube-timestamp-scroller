@@ -7,13 +7,23 @@ function isTimestamp(element) {
 }
 
 function videoPauseHandler() {
-  lastClickedTimestamp?.scrollIntoView({ block: 'center' });
+  if (!lastClickedTimestamp) return;
+
+  const comment = lastClickedTimestamp.closest('ytd-comment-renderer');
+
+  lastClickedTimestamp.scrollIntoView({ block: 'center' });
   lastClickedTimestamp = null;
+
+  if (!comment) return;
+
+  comment.classList.add(HIGHLIGHT_CLASS);
+  setTimeout(() => comment.classList.remove(HIGHLIGHT_CLASS), 1000);
 }
 
 function setupVideo() {
   video = document.querySelector('video');
-  video?.addEventListener('pause', videoPauseHandler);
+
+  if (video) video.addEventListener('pause', videoPauseHandler);
 }
 
 function documentClickHandler(e) {
@@ -26,6 +36,7 @@ function documentClickHandler(e) {
 
 /* Variables */
 const YOUTUBE_ID_REGEX = /^\/watch\?v=[\w-]+&t=\d+s$/i;
+const HIGHLIGHT_CLASS = 'yts-highlight-animation';
 let video = null;
 let lastClickedTimestamp = null;
 

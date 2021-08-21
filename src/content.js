@@ -30,4 +30,4 @@ let video = null;
 let lastClickedTimestamp = null;
 
 /* Events */
-document.addEventListener('click', documentClickHandler);
+document.addEventListener('click', documentClickHandler, { capture: true });

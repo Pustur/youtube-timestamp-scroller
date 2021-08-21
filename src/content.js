@@ -7,13 +7,16 @@ function isTimestamp(element) {
 }
 
 function videoPauseHandler() {
-  lastClickedTimestamp?.scrollIntoView({ block: 'center' });
+  if (!lastClickedTimestamp) return;
+
+  lastClickedTimestamp.scrollIntoView({ block: 'center' });
   lastClickedTimestamp = null;
 }
 
 function setupVideo() {
   video = document.querySelector('video');
-  video?.addEventListener('pause', videoPauseHandler);
+
+  if (video) video.addEventListener('pause', videoPauseHandler);
 }
 
 function documentClickHandler(e) {

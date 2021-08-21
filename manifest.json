@@ -2,8 +2,8 @@
   "author": "Loris Bettazza",
   "manifest_version": 2,
   "name": "YouTube Timestamp Scroller",
-  "description": "Browser extension to scroll back to a YouTube comment after clicking its timestamp",
-  "version": "1.0.0",
+  "description": "Browser extension to scroll back to a YouTube comment after watching its timestamp",
+  "version": "1.0.1",
   "content_scripts": [
     {
       "matches": ["https://www.youtube.com/*"],
